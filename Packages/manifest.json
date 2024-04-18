@@ -3,10 +3,13 @@
     {
       "name": "Keijiro",
       "url": "https://registry.npmjs.com",
-      "scopes": [ "jp.keijiro" ]
+      "scopes": [
+        "jp.keijiro"
+      ]
     }
   ],
   "dependencies": {
+    "com.unity.ide.rider": "3.0.28",
     "com.unity.ugui": "1.0.0",
     "jp.keijiro.klak.testtools": "1.0.4",
     "jp.keijiro.mediapipe.blazepalm": "2.1.1",
