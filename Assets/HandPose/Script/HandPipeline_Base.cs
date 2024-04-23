@@ -20,6 +20,7 @@ sealed partial class HandPipeline : System.IDisposable
     (PalmDetector palm, HandLandmarkDetector landmark) _detector;
     (PalmDetector palm, HandLandmarkDetector landmark) _detector2;
     (ComputeBuffer region, ComputeBuffer filter) _buffer;
+    (ComputeBuffer region, ComputeBuffer filter) _buffer2;
     GlobalKeyword _keywordNchw;
 
     #endregion
@@ -37,8 +38,10 @@ sealed partial class HandPipeline : System.IDisposable
         var filterBufferLength = HandLandmarkDetector.VertexCount * 2;
 
         _buffer = (new ComputeBuffer(1, regionStructSize),
-                   new ComputeBuffer(filterBufferLength, sizeof(float) * 4));
-
+            new ComputeBuffer(filterBufferLength, sizeof(float) * 4));
+                   
+        _buffer2 = (new ComputeBuffer(1, regionStructSize),
+            new ComputeBuffer(filterBufferLength, sizeof(float) * 4));
         _keywordNchw = GlobalKeyword.Create("NCHW_INPUT");
         Shader.SetKeyword(_keywordNchw, _detector.palm.InputIsNCHW);
         Shader.SetKeyword(_keywordNchw, _detector2.palm.InputIsNCHW);
@@ -51,7 +54,9 @@ sealed partial class HandPipeline : System.IDisposable
         _detector.landmark.Dispose();
         _detector2.landmark.Dispose();
         _buffer.region.Dispose();
+        _buffer2.region.Dispose();
         _buffer.filter.Dispose();
+        _buffer2.filter.Dispose();
     }
 
     #endregion

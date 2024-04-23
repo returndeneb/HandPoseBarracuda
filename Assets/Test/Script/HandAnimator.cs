@@ -72,7 +72,16 @@ public sealed class HandAnimator : MonoBehaviour
         // Joint balls
         for (var i = 0; i < HandPipeline.KeyPointCount; i++)
         {
+            Debug.Log(_pipeline.GetKeyPoint(i));
             var xform = CalculateJointXform(_pipeline.GetKeyPoint(i));
+            Graphics.DrawMesh(_jointMesh, xform, _jointMaterial, layer);
+        }
+        
+        for (var i = 0; i < HandPipeline.KeyPointCount; i++)
+        {
+            var newkey = _pipeline.GetKeyPoint(i);
+            newkey.x = -newkey.x;
+            var xform = CalculateJointXform(newkey);
             Graphics.DrawMesh(_jointMesh, xform, _jointMaterial, layer);
         }
 
