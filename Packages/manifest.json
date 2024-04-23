@@ -1,19 +1,10 @@
 {
-  "scopedRegistries": [
-    {
-      "name": "Keijiro",
-      "url": "https://registry.npmjs.com",
-      "scopes": [
-        "jp.keijiro"
-      ]
-    }
-  ],
   "dependencies": {
     "com.unity.ide.rider": "3.0.28",
     "com.unity.ugui": "1.0.0",
-    "jp.keijiro.klak.testtools": "1.0.4",
-    "jp.keijiro.mediapipe.blazepalm": "2.1.1",
-    "jp.keijiro.mediapipe.handlandmark": "2.1.1",
-    "jp.keijiro.test-assets": "1.0.1"
+    "com.unity.sentis": "1.2.0-exp.2",
+    "com.unity.modules.audio": "1.0.0",
+    "com.unity.modules.unitywebrequest": "1.0.0",
+    "com.unity.modules.unitywebrequesttexture": "1.0.0"
   }
 }

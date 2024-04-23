@@ -1,5 +1,5 @@
 using UnityEngine;
-using Unity.Barracuda;
+using Unity.Sentis;
 
 namespace MediaPipe.HandPose {
 
@@ -11,7 +11,9 @@ namespace MediaPipe.HandPose {
 public sealed class ResourceSet : ScriptableObject
 {
     public MediaPipe.BlazePalm.ResourceSet blazePalm;
+    public MediaPipe.BlazePalm.ResourceSet blazePalm2;
     public MediaPipe.HandLandmark.ResourceSet handLandmark;
+    public MediaPipe.HandLandmark.ResourceSet handLandmark2;
     public ComputeShader compute;
 }
 

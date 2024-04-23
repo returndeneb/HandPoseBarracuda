@@ -185,13 +185,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 362122828}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ff2e515a81541cbb664860588e2c6e, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c26b88523243f247b05ba44aab377b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _sourceType: 2
   _texture: {fileID: 0}
   _textureUrl: 
-  _video: {fileID: 0}
   _videoUrl: 
   _webcamName: 
   _webcamResolution: {x: 1920, y: 1080}

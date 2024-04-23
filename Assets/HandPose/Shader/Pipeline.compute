@@ -12,7 +12,7 @@
 #include "HandRegion.hlsl"
 #include "LowPassFilter.hlsl"
 #include "Misc.hlsl"
-#include "Packages/jp.keijiro.mediapipe.blazepalm/Shader/Struct.hlsl"
+#include "Assets/blazepalm/Shader/Struct.hlsl"
 
 //
 // Kernel 0: Input image scaling and padding (letterboxing)
